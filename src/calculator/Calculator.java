@@ -3,7 +3,8 @@ package calculator;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Calculator implements ActionListener {
+public class Calculator implements ActionListener 
+{
 	Frame f = new Frame();
 
 	Label lfn = new Label("First Number");
@@ -20,7 +21,8 @@ public class Calculator implements ActionListener {
 	Button bmul = new Button("Multiplication");
 	Button bcancel = new Button("Cancel");
 
-	Calculator() {
+	Calculator() 
+	{
 		f.setLayout(new GridLayout(8, 2, 20, 10));
 		f.setSize(650, 650);
 		f.setVisible(true);
@@ -46,17 +48,21 @@ public class Calculator implements ActionListener {
 
 	}
 
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e)
+	{
 		int n1 = Integer.parseInt(t1.getText());
 		int n2 = Integer.parseInt(t2.getText());
 
-		if (e.getSource() == badd) {
+		if (e.getSource() == badd) 
+		{
 			t3.setText(String.valueOf(n1 + n2));
 		}
-		if (e.getSource() == bsub) {
+		if (e.getSource() == bsub) 
+		{
 			t3.setText(String.valueOf(n1 - n2));
 		}
-		if (e.getSource() == bmul) {
+		if (e.getSource() == bmul) 
+		{
 			t3.setText(String.valueOf(n1 * n2));
 		}
 		if (e.getSource() == bdiv) {
@@ -67,7 +73,8 @@ public class Calculator implements ActionListener {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		new Calculator();
 	}
 
